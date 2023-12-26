@@ -2,8 +2,9 @@ CREATE TABLE klient (
     id_klienta     NUMBER(6) NOT NULL,
     imie           VARCHAR2(30) NOT NULL,
     nazwisko       VARCHAR2(30) NOT NULL,
-    numer_telefonu VARCHAR2(9) NOT NULL,
-    email          VARCHAR2(40) NOT NULL
+    numer_telefonu VARCHAR2(9),
+    email          VARCHAR2(40) NOT NULL,
+    konto_aktywne  CHAR(1) NOT NULL
 );
 
 ALTER TABLE klient ADD CONSTRAINT klient_pk PRIMARY KEY ( id_klienta );
